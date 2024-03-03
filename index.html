@@ -1,11 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mukto Forum | Home</title>
+    <!-- Tailwind & daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/da9af4df5f.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <h1>Coming Soon...</h1>
+    <header class="container mx-auto px-5 space-y-10 font-mulish">
+        <!-- navbar -->
+        <nav class="mt-4">
+            <div class="navbar bg-base-100  flex justify-between">
+                <!-- title+responsive -->
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-5 z-[1] p-2 shadow bg-base-100 rounded-box w-52 grid gap-2">
+                            <li>
+                                <a class="tooltip bg-base-200 rounded-full text-lg" data-tip="Home">
+                                    <i class="fa-solid fa-house"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="tooltip bg-base-200 rounded-full text-lg" data-tip="Edit">
+                                    <i class="fa-regular fa-pen-to-square"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="tooltip bg-base-200 rounded-full text-lg" data-tip="Add">
+                                    <i class="fa-solid fa-user-plus "></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="tooltip bg-base-200 rounded-full text-lg" data-tip="Report">
+                                    <i class="fa-regular fa-flag"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#" class="tooltip text-3xl font-extrabold" data-tip="Retro">ReTro</a>
+                </div>
+
+                <div>
+                    <!-- menu -->
+                    <div class="navbar-center hidden lg:flex ">
+                        <ul class="menu menu-horizontal rounded-box flex gap-2">
+                            <li>
+                                <a class="tooltip bg-base-200 rounded-full text-lg" data-tip="Home">
+                                    <i class="fa-solid fa-house"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="tooltip bg-base-200 rounded-full text-lg" data-tip="Edit">
+                                    <i class="fa-regular fa-pen-to-square"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="tooltip bg-base-200 rounded-full text-lg" data-tip="Add">
+                                    <i class="fa-solid fa-user-plus "></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="tooltip bg-base-200 rounded-full text-lg" data-tip="Report">
+                                    <i class="fa-regular fa-flag"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- button -->
+                    <div class="">
+                        <a href="#" class="rounded-full py-3 px-7 bg-[#797DFC] text-white tooltip hover:bg-violet-500"
+                            data-tip="Sign In">Sign In</a>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        <!-- banner -->
+        <section class="text-white">
+            <div
+                class="bg-[url('images/bgbanner.png')] h-max lg:h-[500px] bg-[#12132D] bg-no-repeat bg-cover rounded-3xl flex flex-col lg:flex-row justify-evenly items-center">
+                <div class="w-full lg:w-1/2 space-y-5 text-center lg:text-start">
+                    <h1 class="text-5xl font-extrabold leading-tight">Welcome to the <br> <span
+                            class="p-color">ReTro</span> Forum</h1>
+                    <p>Share your favorite opinion and win and wp forum coffee mug!</p>
+                    <label class="input input-bordered flex items-center gap-2 w-3/5 rounded-full mx-auto lg:mx-0">
+                        <input type="text" class="grow text-black" placeholder="Search here anything" />
+                        <button
+                            class="btn btn-sm bg-[#797DFC] text-white rounded-full hover:bg-violet-500 hidden md:block">Search</button>
+                    </label>
+                    <div>
+                        <button
+                            class="btn border-none bg-[#797DFC] text-white rounded-full hover:bg-violet-500 md:hidden block mx-auto mb-3 lg:mb-0">Search</button>
+                    </div>
+                </div>
+                <div class="w-4/5 lg:w-1/3 bg-white text-black flex justify-evenly rounded-2xl text-lg font-bold mb-5 lg:mb-0">
+                    <div class="py-5 space-y-3">
+                        <p>Registered Users</p>
+                        <p>Forum</p>
+                        <p>Topics</p>
+                        <p>Replies</p>
+                    </div>
+                    <div class="py-5 space-y-3">
+                        <p>01</p>
+                        <p>05</p>
+                        <p>01</p>
+                        <p>01</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
+
+
+
+    <!-- Scripts -->
+    <script src="js/index.js"></script>
 </body>
+
 </html>
