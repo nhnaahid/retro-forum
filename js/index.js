@@ -5,7 +5,7 @@ const loadPosts = async () => {
     const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts');
     const data = await res.json();
     const posts = data.posts;
-    displayPosts(posts);
+    displayPosts(posts, false);
     // console.log('load posts function again');
 }
 
@@ -17,14 +17,20 @@ const loadSearchedPost = async (searchText) => {
     // console.log(data);
     const posts = data.posts;
     setTimeout(() => {
-        displayPosts(posts);
-    }, 2000);
+        displayPosts(posts, true);
+    }, 1000);
     // displayPosts(posts);
     // console.log(posts);
 }
 
 // display all posts
-const displayPosts = (posts) => {
+const displayPosts = (posts, isSearched) => {
+    // if searched then show the section
+    if (isSearched) {
+        const discussContainer = document.getElementById('discuss-container');
+        discussContainer.classList.remove('hidden');
+        discussContainer.classList.add('flex');
+    }
     // console.log('display posts function');
     const discussCardContainer = document.getElementById('discuss-card-container');
     // Clear previous posts data
@@ -188,6 +194,11 @@ const handleMarkAsRead = async (postId) => {
 
 // handle searching
 const handleSearch = () => {
+    // hide previous posts
+    const discussContainer = document.getElementById('discuss-container');
+    discussContainer.classList.remove('flex');
+    discussContainer.classList.add('hidden');
+
     toggleLoadingSpinner('search-loading-spinner', true);
     const searchBox = document.getElementById('search-box');
     const searchText = searchBox.value;
